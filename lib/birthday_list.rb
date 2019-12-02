@@ -1,2 +1,2 @@
-class Birthday
-end  
+class Birthday_list
+end

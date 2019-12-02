@@ -1,5 +1,5 @@
 require 'birthday_list'
 
-describe Birthday do
+describe Birthday_list do
 
 end
