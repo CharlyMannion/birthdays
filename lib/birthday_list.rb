@@ -22,8 +22,8 @@ end
 
   def check_today
     today = Date.today.iso8601
-    p "puttsing iteration below"
-    @list.each { |checker| puts "#{checker.name}" }
+    # p "puttsing iteration below"
+    @list.each { |checker| puts "#{checker.name}" if checker.dob == today }
   end
 
 end
