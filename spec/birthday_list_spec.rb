@@ -1,8 +1,10 @@
 require 'birthday_list'
+require 'date'
 
 describe Birthday_list do
   it { is_expected.to respond_to :add_birthday }
   it { is_expected.to respond_to :display_list }
+  it { is_expected.to respond_to :check_today }
 
 
   describe '#add_birthday' do
@@ -39,6 +41,16 @@ describe Birthday_list do
   #     birthday_list.add_birthday("Jane", "1992-07-10")
     # end
   # end
+
+  describe '#check_today'do
+    it 'checks if it is anyones birthday today' do
+      test_birth_list = Birthday_list.new
+      test_birth_list.add_birthday("Jane", "1992-07-10")
+      the_today = Date.new(1992, 07, 10)
+      allow(Date).to receive(:today).and_return(the_today)
+      expect(test_birth_list.check_today).to eq("Jane")
+    end
+  end
 end
 
 describe '#initialize' do

@@ -1,4 +1,4 @@
-# require 'date'
+require 'date'
 
 class Birthday_list
 
@@ -18,6 +18,12 @@ end
 
   def display_list
     @list.each { |bday| puts "#{bday.name}: #{bday.dob}" }
+  end
+
+  def check_today
+    # today = Date.today.iso8601
+    # @list.each
+    "Jane"
   end
 
 end
@@ -48,4 +54,5 @@ end
 # birthday_list.list
 # birthday_list.add_birthday("Jenna", "1993-07-10")
 # birthday_list.list
-# p birthday_list.display_list
+# # p birthday_list.display_list
+# p birthday_list.check_today
