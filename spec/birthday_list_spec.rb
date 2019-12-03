@@ -6,8 +6,13 @@ describe Birthday_list do
 end
 
 describe '#initialize' do
+  test_birthday = Birthday.new("Jenna", "1993-07-10")
+
   it 'should set the instance variable name' do
-    test_birthday = Birthday.new("Jenna")
     expect(test_birthday.name).to eq("Jenna")
+  end
+
+  it 'should set the instance variable date' do
+    expect(test_birthday.dob).to eq("1993-07-10")
   end
 end
