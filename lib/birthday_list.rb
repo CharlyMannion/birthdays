@@ -21,9 +21,9 @@ end
   end
 
   def check_today
-    # today = Date.today.iso8601
-    # @list.each
-    "Jane"
+    today = Date.today.iso8601
+    p "puttsing iteration below"
+    @list.each { |checker| puts "#{checker.name}" }
   end
 
 end
@@ -50,7 +50,7 @@ end
 #
 # birthday_list = Birthday_list.new
 # birthday_list.list
-# birthday_list.add_birthday("Charly", "1993-08-02")
+# birthday_list.add_birthday("Charly", "2019-12-03")
 # birthday_list.list
 # birthday_list.add_birthday("Jenna", "1993-07-10")
 # birthday_list.list
