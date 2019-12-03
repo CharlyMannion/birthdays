@@ -17,7 +17,9 @@ end
   end
 
   def display_list
-    "Jane: 1992-07-10"
+    # "Jane: 1992-07-10"
+    # p @list
+    @list.each { |bday| puts "#{bday.name}: #{bday.dob}" }
   end
 
 end
@@ -45,11 +47,11 @@ end
 # p birthday_test1 = Birthday.new("Jenna", "1993-07-10")
 # p birthday_test1.name
 # p birthday_test1.date
-
-# p birthday_list = Birthday_list.new
-# p birthday_list.list
-# p birthday_list.add_birthday("Charly", "1993-08-02")
-# p birthday_list.list
-# p birthday_list.add_birthday("Jenna", "1993-07-10")
-# p birthday_list.list
-# p birthday_list.show_list
+#
+birthday_list = Birthday_list.new
+birthday_list.list
+birthday_list.add_birthday("Charly", "1993-08-02")
+birthday_list.list
+birthday_list.add_birthday("Jenna", "1993-07-10")
+birthday_list.list
+p birthday_list.display_list
