@@ -7,8 +7,8 @@ def initialize(birthday_class = Birthday)
   @birthday_class = birthday_class
 end
 
-  def add_birthday
-    birthday = @birthday_class.new
+  def add_birthday(name, dob)
+    birthday = @birthday_class.new(name, dob)
     birthday.name
   end
 

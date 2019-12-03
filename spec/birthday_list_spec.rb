@@ -11,7 +11,7 @@ describe Birthday_list do
       birthday_list = Birthday_list.new(birthday_class_double)
 
       expect(birthday_double).to receive(:name)
-      birthday_list.add_birthday
+      birthday_list.add_birthday("Jane", "1992-07-10")
     end
   end
 end
