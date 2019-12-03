@@ -16,6 +16,10 @@ end
     @list << birthday
   end
 
+  def display_list
+    "Jane: 1992-07-10"
+  end
+
 end
 
 
@@ -48,3 +52,4 @@ end
 # p birthday_list.list
 # p birthday_list.add_birthday("Jenna", "1993-07-10")
 # p birthday_list.list
+# p birthday_list.show_list

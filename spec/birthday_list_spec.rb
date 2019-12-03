@@ -2,6 +2,8 @@ require 'birthday_list'
 
 describe Birthday_list do
   it { is_expected.to respond_to :add_birthday }
+  it { is_expected.to respond_to :display_list }
+
 
   describe '#add_birthday' do
     it 'makes a birthday' do
@@ -22,8 +24,19 @@ describe Birthday_list do
       birthday_list = Birthday_list.new(birthday_class_double)
 
       birthday_list.add_birthday("Jane", "1992-07-10")
-      p birthday_list.list
       expect(birthday_list.list).to include(birthday_double)
+    end
+  end
+
+  describe '#show_list' do
+    it 'formats the birthdays in to a list' do
+      birthday_double = double :birthday, name: "Jenna", dob: "1993-07-10"
+      birthday_class_double = double :birthday_class, new: birthday_double
+
+      birthday_list = Birthday_list.new(birthday_class_double)
+
+      birthday_list.add_birthday("Jane", "1992-07-10")
+      expect(birthday_list.display_list).to eq("Jane: 1992-07-10")      
     end
   end
 end
